@@ -1,0 +1,167 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    padding: 35px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.container:hover { transform: scale(1.02); }
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+p {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+    font-size: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 17px;
+    transition: all 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.15);
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.select-group {
+    flex: 1;
+}
+
+.swap-btn {
+    background: #667eea;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+}
+
+.swap-btn:hover {
+    background: #5a6fd8;
+    transform: scale(1.15) rotate(180deg);
+}
+
+.swap-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.country-card {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #f8f9ff;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.country-card.show {
+    display: flex;
+    opacity: 1;
+}
+
+.flag {
+    font-size: 30px;
+}
+
+.name {
+    font-weight: bold;
+    color: #333;
+}
+
+.result {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 25px 0;
+    transition: background 0.3s;
+}
+
+.result:hover { background: #e0e8ff; }
+
+#convertedAmount {
+    font-size: 40px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+#targetCurrency {
+    font-size: 20px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.rate-info {
+    font-size: 15px;
+    color: #555;
+    background: #f8f9ff;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 480px) {
+    .container { padding: 25px; max-width: 100%; }
+    .row { flex-direction: column; gap: 15px; }
+    .swap-btn { transform: rotate(90deg); margin: 10px auto; }
+    #convertedAmount { font-size: 32px; }
+    select { font-size: 16px; }
+}
+
+@media (max-width: 320px) {
+    h1 { font-size: 24px; }
+    input, select { padding: 12px; font-size: 15px; }
+}

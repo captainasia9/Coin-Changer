@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Global Currency Converter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Currency Converter</h1>
+        <p>Select countries for live conversions (rates as of Dec 12, 2025)</p>
+
+        <div class="converter">
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" value="1" min="0" step="any" placeholder="Enter amount">
+            </div>
+
+            <div class="row">
+                <div class="select-group">
+                    <div class="input-group">
+                        <label for="from">From Country</label>
+                        <select id="from"></select>
+                    </div>
+                    <div id="fromCard" class="country-card"></div>
+                </div>
+
+                <div class="swap-btn" id="swap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 7l-5 5 5 5M17 17l5-5-5-5M3 12h18"/>
+                    </svg>
+                </div>
+
+                <div class="select-group">
+                    <div class="input-group">
+                        <label for="to">To Country</label>
+                        <select id="to"></select>
+                    </div>
+                    <div id="toCard" class="country-card"></div>
+                </div>
+            </div>
+
+            <div class="result">
+                <div id="convertedAmount">1.00</div>
+                <div id="targetCurrency">USD</div>
+            </div>
+
+            <div class="rate-info" id="rateInfo">
+                Loading rates...
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
